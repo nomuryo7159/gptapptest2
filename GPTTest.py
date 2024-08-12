@@ -1,8 +1,8 @@
 import streamlit as st # フロントエンドを扱うstreamlitの機能をインポート
-from openai import OpenAI # openAIのchatGPTのAIを活用するための機能をインポート
+import openai # openAIのchatGPTのAIを活用するための機能をインポート
 
-# 外部ファイルからAPI keyを保存
-OpenAI.api_key = st.secrets["openai_api_key"]
+# APIキーをStreamlitのSecretsから取得して設定
+openai.api_key = st.secrets["openai_api_key"]
 
 # アクセスの為のキーをos.environ["OPENAI_API_KEY"]に代入し、設定
 
