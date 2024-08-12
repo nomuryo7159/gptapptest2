@@ -2,11 +2,11 @@ import streamlit as st # フロントエンドを扱うstreamlitの機能をイ�
 from openai import OpenAI # openAIのchatGPTのAIを活用するための機能をインポート
 
 # 外部ファイルからAPI keyを保存
-OpenAI.api_key = st.secrets.OpenAIAPI.openai_api_key
+OpenAI.api_key = st.secrets["openai_api_key"]
 
 # アクセスの為のキーをos.environ["OPENAI_API_KEY"]に代入し、設定
 
-import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
+# import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
 # ここにご自身のAPIキーを入力してください！
 # os.environ["OPENAI_API_KEY"] = 'XXXXXXXXXXXXXX'
 
